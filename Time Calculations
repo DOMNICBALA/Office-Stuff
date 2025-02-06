@@ -7,4 +7,4 @@
 =ARRAYFORMULA(IF(A2:A<>"", TEXT(INT((B2:B-A2:A)*24),"0") & " hours " & TEXT(MOD((B2:B-A2:A)*1440,60),"0") & " minutes", ""))
 
                   F
-=ARRAYFORMULA(IF(A2:A<>"", IF(B2:B<A2:A, ABS((B2:B+1-A2:A)*1440), ABS((B2:B-A2:A)*1440)), ""))
+=ARRAYFORMULA(IF(ROW(A2:A) = 2, "Result", IF(A2:A<>"", IF(B2:B<A2:A, ABS((B2:B+1-A2:A)*1440), ABS((B2:B-A2:A)*1440)), "")))
