@@ -1,0 +1,12 @@
+                  c
+=ARRAYFORMULA(IF(A1:A<>"", ABS((B1:B-A1:A)*1440), ""))
+
+                  D
+=ARRAYFORMULA(IF(A2:A<>"", ABS((B2:B-A2:A)*24), ""))
+
+                  E
+=ARRAYFORMULA(IF(A1:A<>"", TEXT(INT((B1:B-A1:A)*24),"0") & " hours " & TEXT(MOD((B1:B-A1:A)*1440,60),"0") & " minutes", ""))
+
+                  F
+=ARRAYFORMULA(IF(A2:A<>"", IF(B2:B<A2:A, ABS((B2:B+1-A2:A)*1440), ABS((B2:B-A2:A)*1440)), ""))
+
