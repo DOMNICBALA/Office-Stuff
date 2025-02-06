@@ -1,2 +1,2 @@
                                  c
-=ARRAYFORMULA(IF(A:A<>"", (A:A - B:B) / 65, ""))
+={"Result"; ARRAYFORMULA(IF(A2:A<>"", (A2:A - B2:B) / 65, ""))}
