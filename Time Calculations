@@ -1,6 +1,5 @@
                   c
-=ARRAYFORMULA(IF(A1:A<>"", ABS((B1:B-A1:A)*1440), ""))
-
+=ARRAYFORMULA(IF(A1:A="Heading", "Heading", IF(A2:A<>"", ABS((B2:B-A2:A)*1440), "")))
                   D
 =ARRAYFORMULA(IF(A2:A<>"", ABS((B2:B-A2:A)*24), ""))
 
